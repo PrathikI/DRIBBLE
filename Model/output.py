@@ -7,6 +7,6 @@ def structure_output(analysis_results):
     return formatted_output
 
 def save_final_output(final_output):
-    output_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPrediction/final_model_output.csv'
+    output_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/OutputLogs/final_output.csv'
     final_output.to_csv(output_path, index=False)
     print(f"Final model output saved to {output_path}")

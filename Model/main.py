@@ -7,7 +7,7 @@ from output import structure_output, save_final_output
 def main():
     print("Starting the NBA Player Prediction script...")
     
-    base_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPrediction/'
+    base_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/Data'
     
     print("Loading data...")
     shot_logs_df, game_schedule, player_stats = load_data(base_path)
