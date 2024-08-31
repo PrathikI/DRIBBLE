@@ -30,7 +30,7 @@ python main.py
 ```
 ## Model Accuracies
 
-The following are the accuracies achieved using different techniques and metrics:
+The following are the CURRENT accuracies achieved using different techniques and metrics (will continue to improve):
 
 - **Euclidean Metric**: 57.66%
 - **Manhattan Metric**: 57.36%
