@@ -27,7 +27,7 @@ To execute the full workflow, run the `main.py` file. This file orchestrates the
 
 ```bash
 python main.py
-
+```
 ## Model Accuracies
 
 The following are the accuracies achieved using different techniques and metrics:
