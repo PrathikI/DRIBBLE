@@ -2,18 +2,6 @@
 
 This project leverages a K-Nearest Neighbors (KNN) algorithm with various distance metrics and ensemble methods to predict NBA shot outcomes based on historical location data, enhancing decision-making by identifying optimal shooting strategies.
 
-## Model Accuracies
-
-The following are the accuracies achieved using different techniques and metrics:
-
-- **Euclidean Metric**: 57.66%
-- **Manhattan Metric**: 57.36%
-- **Minkowski Metric**: 57.66%
-- **Cosine Metric**: 56.57%
-- **Chebyshev Metric**: 56.93%
-- **Weighted Metric**: 56.55%
-- **Bagging Metric**: 59.77%
-
 ## Project Structure
 
 The project is organized into several key modules, each responsible for a specific aspect of the workflow:
@@ -39,3 +27,15 @@ To execute the full workflow, run the `main.py` file. This file orchestrates the
 
 ```bash
 python main.py
+
+## Model Accuracies
+
+The following are the accuracies achieved using different techniques and metrics:
+
+- **Euclidean Metric**: 57.66%
+- **Manhattan Metric**: 57.36%
+- **Minkowski Metric**: 57.66%
+- **Cosine Metric**: 56.57%
+- **Chebyshev Metric**: 56.93%
+- **Weighted Metric**: 56.55%
+- **Bagging Metric**: 59.77%
