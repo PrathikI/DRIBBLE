@@ -1,4 +1,4 @@
-# D.R.I.B.B.L.E 
+# DRIBBLE
 
 Data-Driven Insights for Basketball Location & Efficiency
 
