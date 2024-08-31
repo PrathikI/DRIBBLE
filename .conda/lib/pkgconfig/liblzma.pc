@@ -5,10 +5,10 @@
 # You can do whatever you want with this file.
 #
 
-prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda
-exec_prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda
-libdir=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib
-includedir=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
+prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda
+exec_prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda
+libdir=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib
+includedir=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
 
 Name: liblzma
 Description: General purpose data compression library

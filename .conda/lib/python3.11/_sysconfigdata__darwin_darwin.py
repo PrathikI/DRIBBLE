@@ -12,22 +12,22 @@ build_time_vars = {'ABIFLAGS': '',
  'BASECFLAGS': '',
  'BASECPPFLAGS': '-IObjects -IInclude -IPython',
  'BASEMODLIBS': '',
- 'BINDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/bin',
- 'BINLIBDEST': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11',
+ 'BINDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/bin',
+ 'BINLIBDEST': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11',
  'BLDLIBRARY': 'libpython3.11.a',
  'BLDSHARED': 'clang -bundle -undefined '
               'dynamic_lookup '
               ''
               ''
               ''
-              '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-              '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+              '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+              '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
               ''
               ''
               ''
               ''
-              '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-              '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+              '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+              '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'BOOTSTRAP_HEADERS': '\\',
  'BUILDEXE': '.exe',
  'BUILDPYTHON': 'python.exe',
@@ -39,14 +39,14 @@ build_time_vars = {'ABIFLAGS': '',
            ''
            '-fPIC   -O2  '
            '-isystem '
-           '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+           '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
            ''
            ''
            '-arch arm64  '
            ''
            '-fPIC   -O2  '
            '-isystem '
-           '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+           '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
            ''
            ''
            '-arch arm64 ',
@@ -58,7 +58,7 @@ build_time_vars = {'ABIFLAGS': '',
                      ''
                      '-fPIC   '
                      '-O2  -isystem '
-                     '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                     '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                      ''
                      ''
                      '-arch arm64 ',
@@ -68,55 +68,55 @@ build_time_vars = {'ABIFLAGS': '',
  'CONFIGURE_CPPFLAGS': ''
                        ''
                        '-D_FORTIFY_SOURCE=2 -isystem '
-                       '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                       '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                        '-mmacosx-version-min=11.1 '
-                       '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+                       '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'CONFIGURE_LDFLAGS': ''
                       ''
                       ''
                       ''
-                      '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-                      '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+                      '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+                      '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'CONFIGURE_LDFLAGS_NODIST': '-Wl,-export_dynamic -g',
  'CONFIGURE_LDFLAGS_NOLTO': '=thin',
- 'CONFIG_ARGS': "'--prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda'"
+ 'CONFIG_ARGS': "'--prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda'"
                 "'--build=arm64-apple-darwin20.0.0'"
                 "'--host=arm64-apple-darwin20.0.0''--enable-ipv6'"
                 "'--with-ensurepip=no'"
-                "'--with-tzpath=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/zoneinfo:/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/tzinfo'"
+                "'--with-tzpath=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/zoneinfo:/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/tzinfo'"
                 "'--with-computed-gotos''--with-system-ffi'"
                 "'--enable-loadable-sqlite-extensions'"
-                "'--with-tcltk-includes=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include'"
-                "'--with-tcltk-libs=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib "
+                "'--with-tcltk-includes=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include'"
+                "'--with-tcltk-libs=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib "
                 "-ltcl8.6 -ltk8.6''--with-platlibdir=lib''--with-lto'"
                 "'--enable-optimizations'"
                 "'-oldincludedir=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include'"
                 "'--disable-shared''PROFILE_TASK=-m test --pgo'"
                 "'build_alias=arm64-apple-darwin20.0.0'"
                 "'host_alias=arm64-apple-darwin20.0.0'"
-                "'PKG_CONFIG_PATH=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/pkgconfig'"
+                "'PKG_CONFIG_PATH=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/pkgconfig'"
                 "'MACHDEP=darwin''CC=clang'"
                 "'CFLAGS="
                 ''
                 '-fPIC   -O2 '
                 '-isystem '
-                '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                 ''
                 ''
                 "-arch arm64 ''LDFLAGS="
                 ''
                 ''
                 ''
-                '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-                "-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib'"
+                '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+                "-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib'"
                 "'CPPFLAGS="
                 ''
                 '-D_FORTIFY_SOURCE=2 -isystem '
-                '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                 '-mmacosx-version-min=11.1 '
-                "-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include'",
- 'CONFINCLUDEDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
- 'CONFINCLUDEPY': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include/python3.11',
+                "-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include'",
+ 'CONFINCLUDEDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
+ 'CONFINCLUDEPY': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include/python3.11',
  'COREPYTHONPATH': '',
  'COVERAGE_INFO': '/private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/build-static/coverage.info',
  'COVERAGE_LCOV_OPTIONS': '--rc lcov_branch_coverage=1',
@@ -129,15 +129,15 @@ build_time_vars = {'ABIFLAGS': '',
              ''
              ''
              '-D_FORTIFY_SOURCE=2 -isystem '
-             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
              '-mmacosx-version-min=11.1 '
-             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
              ''
              ''
              '-D_FORTIFY_SOURCE=2 -isystem '
-             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
              '-mmacosx-version-min=11.1 '
-             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'CXX': 'clang++',
  'DECIMAL_CFLAGS': '-I/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_decimal/libmpdec '
                    '-DUNIVERSAL=1',
@@ -148,13 +148,13 @@ build_time_vars = {'ABIFLAGS': '',
                     '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Programs/_freeze_module.py '
                     '\\',
  'DEEPFREEZE_OBJS': 'Python/deepfreeze/deepfreeze.o',
- 'DESTDIRS': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda '
-             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11 '
-             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11/lib-dynload',
- 'DESTLIB': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11',
+ 'DESTDIRS': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda '
+             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11 '
+             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11/lib-dynload',
+ 'DESTLIB': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11',
  'DESTPATH': '',
- 'DESTSHARED': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11/lib-dynload',
+ 'DESTSHARED': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11/lib-dynload',
  'DFLAGS': '',
  'DIRMODE': 755,
  'DIST': 'README.rst ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
@@ -679,12 +679,12 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE__GETPTY': 0,
  'HOSTRUNNER': '',
  'HOST_GNU_TYPE': 'arm64-apple-darwin20.0.0',
- 'INCLDIRSTOMAKE': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include/python3.11 '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include/python3.11',
- 'INCLUDEDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
- 'INCLUDEPY': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include/python3.11',
+ 'INCLDIRSTOMAKE': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include/python3.11 '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include/python3.11',
+ 'INCLUDEDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
+ 'INCLUDEPY': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include/python3.11',
  'INSTALL': '/usr/bin/install -c',
  'INSTALL_DATA': '/usr/bin/install -c -m 644',
  'INSTALL_PROGRAM': '/usr/bin/install -c',
@@ -697,43 +697,43 @@ build_time_vars = {'ABIFLAGS': '',
                 'dynamic_lookup',
  'LDFLAGS': ''
             ''
-            '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-            '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+            '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+            '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
             ''
             ''
-            '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-            '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+            '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+            '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'LDLIBRARY': 'libpython3.11.a',
  'LDLIBRARYDIR': '',
  'LDSHARED': 'clang -bundle -undefined dynamic_lookup '
              ''
              ''
              ''
-             '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-             '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+             '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+             '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
              ''
              ''
              ''
-             '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-             '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+             '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+             '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'LDVERSION': '3.11',
  'LIBC': '',
- 'LIBDEST': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11',
- 'LIBDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+ 'LIBDEST': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11',
+ 'LIBDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'LIBEXPAT_A': 'Modules/expat/libexpat.a',
  'LIBEXPAT_CFLAGS': '-I/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/expat '
                     '-DNDEBUG -fwrapv -O2 -Wall '
                     ''
                     '-fPIC   -O2 '
                     '-isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     ''
                     ''
                     '-arch arm64  '
                     ''
                     '-fPIC   -O2 '
                     '-isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     ''
                     ''
                     '-arch arm64   -std=c11 '
@@ -745,18 +745,18 @@ build_time_vars = {'ABIFLAGS': '',
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     '-mmacosx-version-min=11.1 '
-                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     '-mmacosx-version-min=11.1 '
-                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'LIBEXPAT_HEADERS': '\\',
  'LIBEXPAT_OBJS': '\\',
- 'LIBFFI_INCLUDEDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+ 'LIBFFI_INCLUDEDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'LIBM': '',
  'LIBMPDEC_A': 'Modules/_decimal/libmpdec/libmpdec.a',
  'LIBMPDEC_CFLAGS': '-I/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_decimal/libmpdec '
@@ -764,14 +764,14 @@ build_time_vars = {'ABIFLAGS': '',
                     ''
                     '-fPIC   -O2 '
                     '-isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     ''
                     ''
                     '-arch arm64  '
                     ''
                     '-fPIC   -O2 '
                     '-isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     ''
                     ''
                     '-arch arm64   -std=c11 '
@@ -783,21 +783,21 @@ build_time_vars = {'ABIFLAGS': '',
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     '-mmacosx-version-min=11.1 '
-                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                    '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                     '-mmacosx-version-min=11.1 '
-                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+                    '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'LIBMPDEC_HEADERS': '\\',
  'LIBMPDEC_OBJS': '\\',
  'LIBOBJDIR': 'Python/',
  'LIBOBJS': '',
- 'LIBPC': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/pkgconfig',
- 'LIBPL': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11/config-3.11-darwin',
+ 'LIBPC': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/pkgconfig',
+ 'LIBPL': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11/config-3.11-darwin',
  'LIBPYTHON': '',
  'LIBRARY': 'libpython3.11.a',
  'LIBRARY_DEPS': 'libpython3.11.a',
@@ -819,13 +819,13 @@ build_time_vars = {'ABIFLAGS': '',
  'LOCALMODLIBS': '',
  'MACHDEP': 'darwin',
  'MACHDEP_OBJS': '',
- 'MACHDESTLIB': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11',
+ 'MACHDESTLIB': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11',
  'MACOSX_DEPLOYMENT_TARGET': '11.1',
  'MAINCC': 'clang',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 0,
  'MAKESETUP': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/makesetup',
- 'MANDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/man',
+ 'MANDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/man',
  'MKDIR_P': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/install-sh '
             '-c -d',
  'MODBUILT_NAMES': 'atexit  faulthandler  posix  _signal  _tracemalloc  '
@@ -853,8 +853,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_AUDIOOP_LDFLAGS': '',
  'MODULE_AUDIOOP_STATE': 'yes',
  'MODULE_BINASCII_CFLAGS': '-DUSE_ZLIB_CRC32 '
-                           '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
- 'MODULE_BINASCII_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+                           '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
+ 'MODULE_BINASCII_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                             '-lz',
  'MODULE_BINASCII_STATE': 'yes',
  'MODULE_CMATH_DEPS': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_math.h',
@@ -895,8 +895,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_XXLIMITED_35_STATE': 'yes',
  'MODULE_XXLIMITED_STATE': 'yes',
  'MODULE_XXSUBTYPE_LDFLAGS': '',
- 'MODULE_ZLIB_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
- 'MODULE_ZLIB_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+ 'MODULE_ZLIB_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
+ 'MODULE_ZLIB_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                         '-lz',
  'MODULE_ZLIB_STATE': 'yes',
  'MODULE__ABC_LDFLAGS': '',
@@ -954,9 +954,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__ELEMENTTREE_STATE': 'yes',
  'MODULE__FUNCTOOLS_LDFLAGS': '',
  'MODULE__GDBM_STATE': 'missing',
- 'MODULE__HASHLIB_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+ 'MODULE__HASHLIB_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'MODULE__HASHLIB_DEPS': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/hashlib.h',
- 'MODULE__HASHLIB_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib   '
+ 'MODULE__HASHLIB_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib   '
                             '-lcrypto',
  'MODULE__HASHLIB_STATE': 'yes',
  'MODULE__HEAPQ_STATE': 'yes',
@@ -967,8 +967,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__JSON_STATE': 'yes',
  'MODULE__LOCALE_LDFLAGS': '',
  'MODULE__LSPROF_STATE': 'yes',
- 'MODULE__LZMA_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
- 'MODULE__LZMA_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+ 'MODULE__LZMA_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
+ 'MODULE__LZMA_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                          '-llzma',
  'MODULE__LZMA_STATE': 'yes',
  'MODULE__MD5_DEPS': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/hashlib.h',
@@ -1004,7 +1004,7 @@ build_time_vars = {'ABIFLAGS': '',
                         '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/getaddrinfo.c '
                         '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/getnameinfo.c',
  'MODULE__SOCKET_STATE': 'yes',
- 'MODULE__SQLITE3_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+ 'MODULE__SQLITE3_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                            '-I/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_sqlite',
  'MODULE__SQLITE3_DEPS': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_sqlite/connection.h '
                          '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_sqlite/cursor.h '
@@ -1013,11 +1013,11 @@ build_time_vars = {'ABIFLAGS': '',
                          '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_sqlite/prepare_protocol.h '
                          '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_sqlite/row.h '
                          '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_sqlite/util.h',
- 'MODULE__SQLITE3_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+ 'MODULE__SQLITE3_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                             '-lsqlite3',
  'MODULE__SQLITE3_STATE': 'yes',
  'MODULE__SRE_LDFLAGS': '',
- 'MODULE__SSL_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+ 'MODULE__SSL_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'MODULE__SSL_DEPS': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_ssl.h '
                      '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_ssl/cert.c '
                      '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_ssl/debughelpers.c '
@@ -1026,7 +1026,7 @@ build_time_vars = {'ABIFLAGS': '',
                      '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_ssl_data_111.h '
                      '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/_ssl_data_300.h '
                      '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Modules/socketmodule.h',
- 'MODULE__SSL_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib  '
+ 'MODULE__SSL_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib  '
                         '-lssl -lcrypto',
  'MODULE__SSL_STATE': 'yes',
  'MODULE__STATISTICS_LDFLAGS': '',
@@ -1042,9 +1042,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__TESTINTERNALCAPI_STATE': 'yes',
  'MODULE__TESTMULTIPHASE_STATE': 'yes',
  'MODULE__THREAD_LDFLAGS': '',
- 'MODULE__TKINTER_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+ 'MODULE__TKINTER_CFLAGS': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                            '-Wno-strict-prototypes -DWITH_APPINIT=1',
- 'MODULE__TKINTER_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+ 'MODULE__TKINTER_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                             '-ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6',
  'MODULE__TKINTER_STATE': 'yes',
  'MODULE__TRACEMALLOC_LDFLAGS': '',
@@ -1061,8 +1061,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MVWDELCH_IS_EXPRESSION': 1,
  'NO_AS_NEEDED': '-Wl,--no-as-needed',
  'OBJECT_OBJS': '\\',
- 'OPENSSL_INCLUDES': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
- 'OPENSSL_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+ 'OPENSSL_INCLUDES': '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
+ 'OPENSSL_LDFLAGS': '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'OPENSSL_LIBS': '-lssl -lcrypto',
  'OPENSSL_RPATH': '',
  'OPT': '-DNDEBUG -fwrapv -O2 -Wall',
@@ -1105,14 +1105,14 @@ build_time_vars = {'ABIFLAGS': '',
                              ''
                              '-fPIC  '
                              '-O2  -isystem '
-                             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                              ''
                              ''
                              '-arch arm64  '
                              ''
                              '-fPIC  '
                              '-O2  -isystem '
-                             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                              ''
                              ''
                              '-arch arm64   -std=c11 '
@@ -1125,28 +1125,28 @@ build_time_vars = {'ABIFLAGS': '',
                              ''
                              ''
                              '-D_FORTIFY_SOURCE=2 -isystem '
-                             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                              '-mmacosx-version-min=11.1 '
-                             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                              ''
                              ''
                              '-D_FORTIFY_SOURCE=2 -isystem '
-                             '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                             '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                              '-mmacosx-version-min=11.1 '
-                             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                             '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                              '-DPy_BUILD_CORE_BUILTIN',
  'PY_CFLAGS': '-DNDEBUG -fwrapv -O2 -Wall '
               ''
               '-fPIC   -O2  '
               '-isystem '
-              '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+              '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
               ''
               ''
               '-arch arm64  '
               ''
               '-fPIC   -O2  '
               '-isystem '
-              '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+              '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
               ''
               ''
               '-arch arm64 ',
@@ -1158,14 +1158,14 @@ build_time_vars = {'ABIFLAGS': '',
                    ''
                    '-fPIC   -O2 '
                    '-isystem '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                    ''
                    ''
                    '-arch arm64  '
                    ''
                    '-fPIC   -O2 '
                    '-isystem '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                    ''
                    ''
                    '-arch arm64   -std=c11 '
@@ -1177,70 +1177,70 @@ build_time_vars = {'ABIFLAGS': '',
                    ''
                    ''
                    '-D_FORTIFY_SOURCE=2 -isystem '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                    '-mmacosx-version-min=11.1 '
-                   '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                   '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                    ''
                    ''
                    '-D_FORTIFY_SOURCE=2 -isystem '
-                   '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                   '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                    '-mmacosx-version-min=11.1 '
-                   '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                   '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                    '-DPy_BUILD_CORE',
  'PY_CORE_LDFLAGS': ''
                     ''
                     ''
                     ''
-                    '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-                    '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+                    '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+                    '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                     ''
                     ''
                     ''
                     ''
-                    '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-                    '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+                    '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+                    '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                     '-Wl,-export_dynamic -g',
  'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
                 '-I/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Include '
                 ''
                 ''
                 '-D_FORTIFY_SOURCE=2 -isystem '
-                '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                 '-mmacosx-version-min=11.1 '
-                '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                 ''
                 ''
                 '-D_FORTIFY_SOURCE=2 -isystem '
-                '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                 '-mmacosx-version-min=11.1 '
-                '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+                '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'PY_ENABLE_SHARED': 0,
  'PY_FORMAT_SIZE_T': '"z"',
  'PY_LDFLAGS': ''
                ''
                ''
                ''
-               '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-               '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+               '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+               '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                ''
                ''
                ''
                ''
-               '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-               '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+               '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+               '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'PY_LDFLAGS_NODIST': '-Wl,-export_dynamic -g',
  'PY_LDFLAGS_NOLTO': ''
                      ''
                      ''
                      ''
-                     '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-                     '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+                     '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+                     '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                      ''
                      ''
                      ''
                      ''
-                     '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
-                     '-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib '
+                     '-Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
+                     '-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib '
                      '=thin',
  'PY_SQLITE_ENABLE_LOAD_EXTENSION': 1,
  'PY_SQLITE_HAVE_SERIALIZE': 1,
@@ -1250,14 +1250,14 @@ build_time_vars = {'ABIFLAGS': '',
                         ''
                         '-fPIC   '
                         '-O2  -isystem '
-                        '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                        '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                         ''
                         ''
                         '-arch arm64  '
                         ''
                         '-fPIC   '
                         '-O2  -isystem '
-                        '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                        '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                         ''
                         ''
                         '-arch arm64   -std=c11 '
@@ -1270,15 +1270,15 @@ build_time_vars = {'ABIFLAGS': '',
                         ''
                         ''
                         '-D_FORTIFY_SOURCE=2 -isystem '
-                        '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                        '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                         '-mmacosx-version-min=11.1 '
-                        '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                        '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                         ''
                         ''
                         '-D_FORTIFY_SOURCE=2 -isystem '
-                        '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include '
+                        '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include '
                         '-mmacosx-version-min=11.1 '
-                        '-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include',
+                        '-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include',
  'PY_SUPPORT_TIER': 0,
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 0,
@@ -1291,7 +1291,7 @@ build_time_vars = {'ABIFLAGS': '',
  'RESSRCDIR': 'Mac/Resources/framework',
  'RETSIGTYPE': 'void',
  'RUNSHARED': '',
- 'SCRIPTDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib',
+ 'SCRIPTDIR': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib',
  'SETPGRP_HAVE_ARG': 0,
  'SHELL': '/bin/sh',
  'SHLIBS': '-ldl  -framework CoreFoundation',
@@ -1345,15 +1345,15 @@ build_time_vars = {'ABIFLAGS': '',
  'TIMEMODULE_LIB': 0,
  'TIME_WITH_SYS_TIME': 1,
  'TM_IN_SYS_TIME': 0,
- 'TZPATH': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/zoneinfo:/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/tzinfo',
+ 'TZPATH': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/zoneinfo:/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/tzinfo',
  'UNICODE_DEPS': '\\',
  'UNIVERSALSDK': '',
  'UPDATE_FILE': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/Tools/scripts/update_file.py',
  'USE_COMPUTED_GOTOS': 1,
  'VERSION': '3.11',
  'VPATH': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work',
- 'WASM_ASSETS_DIR': './Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda',
- 'WASM_STDLIB': './Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/python3.11/os.py',
+ 'WASM_ASSETS_DIR': './Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda',
+ 'WASM_STDLIB': './Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/python3.11/os.py',
  'WHEEL_PKG_DIR': '',
  'WINDOW_HAS_FLAGS': 1,
  'WITH_DECIMAL_CONTEXTVAR': 1,
@@ -1370,7 +1370,7 @@ build_time_vars = {'ABIFLAGS': '',
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
  'abs_builddir': '/private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work/build-static',
  'abs_srcdir': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work',
- 'datarootdir': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share',
- 'exec_prefix': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda',
- 'prefix': '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda',
+ 'datarootdir': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share',
+ 'exec_prefix': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda',
+ 'prefix': '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda',
  'srcdir': '/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work'}

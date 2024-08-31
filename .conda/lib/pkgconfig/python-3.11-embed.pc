@@ -1,5 +1,5 @@
 # See: man pkg-config
-prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda
+prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

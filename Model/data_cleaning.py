@@ -33,7 +33,7 @@ def preprocess_data(shot_logs_df, player_stats, game_schedule):
         print("Data preprocessing completed successfully.")
 
         # Save the cleaned dataset to a CSV file, overwrite if it already exists
-        cleaned_file_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/OutputLogs/cleaned_shot_logs.csv'
+        cleaned_file_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/OutputLogs/cleaned_shot_logs.csv'
         shot_logs_df.to_csv(cleaned_file_path, index=False)
         print(f"Cleaned dataset saved to {cleaned_file_path}")
 

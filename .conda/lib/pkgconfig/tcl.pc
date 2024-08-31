@@ -1,8 +1,8 @@
 # tcl pkg-config source file
 
-prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda
-exec_prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda
-libdir=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib
+prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda
+exec_prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda
+libdir=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib
 includedir=${prefix}/include
 libfile=libtcl8.6.dylib
 

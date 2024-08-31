@@ -82,7 +82,7 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -fwrapv -O2 -Wall
 BASECFLAGS=	
 BASECPPFLAGS=	-IObjects -IInclude -IPython
-CONFIGURE_CFLAGS=	-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include -fdebug-prefix-map=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work=/usr/local/src/conda/python-3.11.9 -fdebug-prefix-map=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda=/usr/local/src/conda-prefix -arch arm64 
+CONFIGURE_CFLAGS=	-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include -fdebug-prefix-map=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work=/usr/local/src/conda/python-3.11.9 -fdebug-prefix-map=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda=/usr/local/src/conda-prefix -arch arm64 
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
@@ -94,8 +94,8 @@ CONFIGURE_LDFLAGS_NODIST=  -Wl,-export_dynamic -g
 # LDFLAGS_NOLTO is an extra flag to disable lto. It is used to speed up building
 # of _bootstrap_python and _freeze_module tools, which don't need LTO.
 CONFIGURE_LDFLAGS_NOLTO==thin
-CONFIGURE_CPPFLAGS=	-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include -mmacosx-version-min=11.1 -I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
-CONFIGURE_LDFLAGS=	-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib
+CONFIGURE_CPPFLAGS=	-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include -mmacosx-version-min=11.1 -I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
+CONFIGURE_LDFLAGS=	-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
 # values.
@@ -134,7 +134,7 @@ MULTIARCH=	darwin
 MULTIARCH_CPPFLAGS = -DMULTIARCH=\"darwin\"
 
 # Install prefix for architecture-independent files
-prefix=		/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda
+prefix=		/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -211,9 +211,9 @@ LIBMPDEC_A= Modules/_decimal/libmpdec/libmpdec.a
 LIBEXPAT_A= Modules/expat/libexpat.a
 
 # OpenSSL options for setup.py so sysconfig can pick up AC_SUBST() vars.
-OPENSSL_INCLUDES=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
+OPENSSL_INCLUDES=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
 OPENSSL_LIBS=-lssl -lcrypto
-OPENSSL_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib
+OPENSSL_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib
 OPENSSL_RPATH=
 
 # Module state, compiler flags and linker flags
@@ -308,32 +308,32 @@ MODULE_NIS_STATE=yes
 MODULE_NIS_CFLAGS=
 MODULE_NIS_LDFLAGS=
 MODULE__SQLITE3_STATE=yes
-MODULE__SQLITE3_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include -I$(srcdir)/Modules/_sqlite
-MODULE__SQLITE3_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -lsqlite3
+MODULE__SQLITE3_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include -I$(srcdir)/Modules/_sqlite
+MODULE__SQLITE3_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -lsqlite3
 MODULE__TKINTER_STATE=yes
-MODULE__TKINTER_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include -Wno-strict-prototypes -DWITH_APPINIT=1
-MODULE__TKINTER_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6
+MODULE__TKINTER_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include -Wno-strict-prototypes -DWITH_APPINIT=1
+MODULE__TKINTER_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6
 MODULE__UUID_STATE=yes
 MODULE__UUID_CFLAGS=
 MODULE__UUID_LDFLAGS=
 MODULE_ZLIB_STATE=yes
-MODULE_ZLIB_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
-MODULE_ZLIB_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -lz
+MODULE_ZLIB_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
+MODULE_ZLIB_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -lz
 MODULE_BINASCII_STATE=yes
-MODULE_BINASCII_CFLAGS=-DUSE_ZLIB_CRC32 -I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
-MODULE_BINASCII_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -lz
+MODULE_BINASCII_CFLAGS=-DUSE_ZLIB_CRC32 -I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
+MODULE_BINASCII_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -lz
 MODULE__BZ2_STATE=yes
 MODULE__BZ2_CFLAGS=
 MODULE__BZ2_LDFLAGS=-lbz2
 MODULE__LZMA_STATE=yes
-MODULE__LZMA_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
-MODULE__LZMA_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -llzma
+MODULE__LZMA_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
+MODULE__LZMA_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -llzma
 MODULE__SSL_STATE=yes
-MODULE__SSL_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
-MODULE__SSL_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib  -lssl -lcrypto
+MODULE__SSL_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
+MODULE__SSL_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib  -lssl -lcrypto
 MODULE__HASHLIB_STATE=yes
-MODULE__HASHLIB_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
-MODULE__HASHLIB_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib   -lcrypto
+MODULE__HASHLIB_CFLAGS=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
+MODULE__HASHLIB_LDFLAGS=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib   -lcrypto
 MODULE__TESTCAPI_STATE=yes
 MODULE__TESTCLINIC_STATE=yes
 MODULE__TESTINTERNALCAPI_STATE=yes
@@ -348,7 +348,7 @@ MODULE_XXLIMITED_35_STATE=yes
 
 
 # Default zoneinfo.TZPATH. Added here to expose it in sysconfig.get_config_var
-TZPATH=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/zoneinfo
+TZPATH=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/zoneinfo
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -357,7 +357,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda' '--build=arm64-apple-darwin20.0.0' '--host=arm64-apple-darwin20.0.0' '--enable-ipv6' '--with-ensurepip=no' '--with-tzpath=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/share/zoneinfo' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include' '--with-tcltk-libs=-L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto' '--enable-optimizations' '-oldincludedir=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo' 'build_alias=arm64-apple-darwin20.0.0' 'host_alias=arm64-apple-darwin20.0.0' 'PKG_CONFIG_PATH=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib/pkgconfig' 'MACHDEP=darwin' 'CC=arm64-apple-darwin20.0.0-clang' 'CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include -fdebug-prefix-map=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work=/usr/local/src/conda/python-3.11.9 -fdebug-prefix-map=/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda=/usr/local/src/conda-prefix -arch arm64 ' 'LDFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib -L/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/lib' 'CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include -mmacosx-version-min=11.1 -I/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include'
+CONFIG_ARGS=	 '--prefix=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda' '--build=arm64-apple-darwin20.0.0' '--host=arm64-apple-darwin20.0.0' '--enable-ipv6' '--with-ensurepip=no' '--with-tzpath=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/share/zoneinfo' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include' '--with-tcltk-libs=-L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto' '--enable-optimizations' '-oldincludedir=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo' 'build_alias=arm64-apple-darwin20.0.0' 'host_alias=arm64-apple-darwin20.0.0' 'PKG_CONFIG_PATH=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib/pkgconfig' 'MACHDEP=darwin' 'CC=arm64-apple-darwin20.0.0-clang' 'CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include -fdebug-prefix-map=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_224hzq1x7f/croot/python-split_1713544626963/work=/usr/local/src/conda/python-3.11.9 -fdebug-prefix-map=/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda=/usr/local/src/conda-prefix -arch arm64 ' 'LDFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib -L/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/lib' 'CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include -mmacosx-version-min=11.1 -I/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include'
 
 
 # Subdirectories with code
@@ -475,7 +475,7 @@ IO_OBJS=	\
 
 ##########################################################################
 
-LIBFFI_INCLUDEDIR=	/Users/iyeng1/Documents/Software-Development/PyDev II/NBAShotPredictor/.conda/include
+LIBFFI_INCLUDEDIR=	/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/.conda/include
 
 ##########################################################################
 # Parser
