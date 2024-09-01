@@ -11,15 +11,14 @@ def main():
     shot_logs_df, game_schedule, player_stats = load_data(base_path)
     
     print("Preprocessing data...")
-    shot_logs_df, player_stats, game_schedule = preprocess_data(shot_logs_df, player_stats, game_schedule)
+    shot_logs_df, _, _ = preprocess_data(shot_logs_df, player_stats, game_schedule)
     
     print("Training and evaluating the model...")
     results_df = train_and_evaluate_model(shot_logs_df)
     
-    final_output_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/OutputLogs/final_output.csv'
-    print("Saving prediction and actual outcome comparison to CSV...")
-    results_df.to_csv(final_output_path, index=False)
-    print(f"Final output saved to {final_output_path}")
+    output_path = '/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/OutputLogs/final_output.csv'
+    print(f"Saving prediction and actual outcome comparison to CSV at: {output_path}")
+    results_df.to_csv(output_path, index=False)
 
     print("Process completed successfully.")
 
