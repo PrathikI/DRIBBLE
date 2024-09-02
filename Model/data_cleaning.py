@@ -41,5 +41,4 @@ def preprocess_data(shot_logs_df):
 
     except Exception as e:
         print(f"An error occurred during preprocessing: {e}")
-        return shot_logs_df  # Return the DataFrame even in case of error to maintain function integrity
-
+        return shot_logs_df  

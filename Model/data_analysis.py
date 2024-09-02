@@ -15,6 +15,7 @@ def analyze_data(shot_logs_df):
     zone_performance['Success Rate'] = (zone_performance['Shots Made'] / (zone_performance['Shots Made'] + zone_performance['Shots Missed'])) * 100
 
     print("Data analysis completed successfully.")
+    
     # Combining all analysis into a single dictionary for output
     analysis_results = {
         'Player Performance': player_performance,

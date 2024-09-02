@@ -16,7 +16,7 @@ def train_and_evaluate_model(shot_logs_df):
     Y = shot_logs_df['SHOT_MADE'].astype(int)  
 
     if Y.isnull().any():
-        Y.ffill(inplace=True)  # Handling NaNs by forward filling
+        Y.ffill(inplace=True)  
 
     # Sample the data to reduce size
     X_sample, Y_sample = X.sample(frac=0.2, random_state=42), Y.sample(frac=0.2, random_state=42)
