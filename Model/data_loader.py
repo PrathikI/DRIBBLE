@@ -18,7 +18,7 @@ def load_data(base_path):
     
     return shot_logs_df
 
-# Uncomment the following lines when ready to process more years:
+# 2004 - 2024 Shot Logs
 # for year in range(2005, 2025):  # From 2005 to 2024 inclusive
 #     file_name = f'NBA_{year}_Shots.csv'
 #     file_path = os.path.join(base_path, file_name)
