@@ -1,53 +1,52 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV, train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
+import pandas as pd
 
 def train_and_evaluate_model(shot_logs_df):
     print("Preparing data for modeling...")
     
-    X = shot_logs_df[['LOC_X', 'LOC_Y']]  
+    # Add more features to the model
+    features = ['LOC_X', 'LOC_Y', 'SHOT_DISTANCE', 'QUARTER', 'SHOT_TYPE']  
+    X = shot_logs_df[features]  
+
+    # One-Hot Encode categorical variables (e.g., 'SHOT_TYPE')
+    X = pd.get_dummies(X, columns=['SHOT_TYPE'])
+
     Y = shot_logs_df['SHOT_MADE'].astype(int)  
 
     if Y.isnull().any():
-        Y.ffill(inplace=True)  
+        Y.ffill(inplace=True)  # Handling NaNs by forward filling
+
+    # Sample the data to reduce size
+    X_sample, Y_sample = X.sample(frac=0.2, random_state=42), Y.sample(frac=0.2, random_state=42)
 
     # Split the data into training and testing sets
-    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+    X_train, X_test, Y_train, Y_test = train_test_split(X_sample, Y_sample, test_size=0.2, random_state=42)
 
     # Setup the grid of parameters to test
-    param_grid = {
-        'n_neighbors': [3, 5, 7, 10, 15],
+    param_dist = {
+        'n_neighbors': [3, 5, 7, 10],
         'weights': ['uniform', 'distance'],
         'metric': ['euclidean', 'manhattan']
     }
 
-    # Create a KNeighborsClassifier and GridSearchCV object
+    # Create a KNeighborsClassifier and RandomizedSearchCV object
     knn = KNeighborsClassifier()
-    grid_search = GridSearchCV(knn, param_grid, cv=5, scoring='accuracy')
-    grid_search.fit(X_train, Y_train)
+    random_search = RandomizedSearchCV(knn, param_distributions=param_dist, n_iter=10, cv=3, scoring='accuracy', random_state=42, n_jobs=-1)
+    random_search.fit(X_train, Y_train)
 
     # Best parameters and best score
-    best_params = grid_search.best_params_
-    best_cv_score = grid_search.best_score_ * 100
+    best_params = random_search.best_params_
+    best_cv_score = random_search.best_score_ * 100
     print(f"Best parameters: {best_params}")
     print(f"Best cross-validated score: {best_cv_score:.2f}%")
 
     # Evaluate the best model on the test set
-    best_knn = grid_search.best_estimator_  
+    best_knn = random_search.best_estimator_  
     Y_pred = best_knn.predict(X_test)
     test_accuracy = accuracy_score(Y_test, Y_pred) * 100  
     print(f"Test set accuracy: {test_accuracy:.2f}%")
-
-    # Debugging: Print samples to verify correct data alignment
-    print("Sample of X_test data:")
-    print(X_test.head())
-
-    print("Sample of corresponding Player Names:")
-    print(shot_logs_df.loc[X_test.index, 'PLAYER_NAME'].head())
-
-    print("Sample of Model Predictions vs Actual Outcomes:")
-    print(pd.DataFrame({'Prediction': Y_pred, 'Actual': Y_test}).head())
 
     # Prepare results DataFrame with proper alignment
     results_df = pd.DataFrame({
