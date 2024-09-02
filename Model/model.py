@@ -10,7 +10,7 @@ def train_and_evaluate_model(shot_logs_df):
     Y = shot_logs_df['SHOT_MADE'].astype(int)  
 
     if Y.isnull().any():
-        Y.ffill(inplace=True)  # Handling NaNs by forward filling
+        Y.ffill(inplace=True)  
 
     # Split the data into training and testing sets
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
