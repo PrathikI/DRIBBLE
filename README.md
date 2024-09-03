@@ -32,14 +32,7 @@ python main.py
 ```
 ## Model Accuracies
 
-The following are the CURRENT accuracies achieved using different DISTANCE techniques:
+The following are the CURRENT accuracies achieved using different DISTANCE and MODEL techniques:
 
-- **Euclidean Metric**: 57.66%
-- **Manhattan Metric**: 57.36%
-- **Minkowski Metric**: 57.66%
-- **Cosine Metric**: 56.57%
-- **Chebyshev Metric**: 56.93%
-
-The following are the CURRENT accuracies achieved using different MODEL techniques:
-- **Weighted Metric**: 56.55%
-- **Bagging Metric**: 59.77%
+- **Best cross-validated score**: 57.61%
+- **Test set accuracy**: 57.78%

@@ -4,7 +4,7 @@ import os
 def load_data(base_path):
     shot_logs = []
     # Load only the 2004 dataset for now
-    file_name = 'NBA_2004_Shots.csv'
+    file_name = 'NBA_2006_Shots.csv'
     file_path = os.path.join(base_path, file_name)
     if os.path.exists(file_path):
         df = pd.read_csv(file_path)
