@@ -6,11 +6,14 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import streamlit as st
 import pandas as pd
+from sklearn.model_selection import RandomizedSearchCV, train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
 from Model.data_loader import load_data
 from Model.data_cleaning import preprocess_data
 from Model.model import train_and_evaluate_model
 from Model.output import structure_output, save_final_output
-from FrontEnd.descriptions import *  # Import descriptions
+from FrontEnd.descriptions import *  
 
 # Customizing the look and feel with CSS for font size and menu bar
 st.set_page_config(page_title="D.R.I.B.B.L.E", layout="wide", initial_sidebar_state="collapsed")
@@ -98,28 +101,52 @@ with tab2:
     uploaded_file = st.file_uploader("Choose a file", type=["csv"])
     if uploaded_file is not None:
         shot_logs_df = pd.read_csv(uploaded_file)
+        st.session_state['shot_logs_df'] = shot_logs_df  
         st.success("Data Ingested Successfully!")
         st.write(shot_logs_df.head())
 
+
 with tab3:
     st.header("Data Transformation")
-    if 'shot_logs_df' in locals():
-        shot_logs_df, metrics = preprocess_data(shot_logs_df, return_metrics=True)
+    if 'shot_logs_df' in st.session_state:
+        # Run preprocessing to get the cleaned dataset and metrics
+        shot_logs_df, metrics = preprocess_data(st.session_state['shot_logs_df'], return_metrics=True)
         st.success("Data Transformed Successfully!")
+
+        # Player-specific search right above the dataset header
+        player_search = st.text_input("Search for a player:")
 
         # Display cleaned dataset header with download button aligned to the right
         st.markdown('<div class="cleaned-dataset-header">', unsafe_allow_html=True)
         st.subheader("Cleaned Dataset")
         st.download_button(
-            label="Download cleaned data",
+            label="Download Transformed Data",
             data=shot_logs_df.to_csv(index=False),
             file_name='cleaned_shot_logs.csv',
-            mime='text/csv',
+            mime='text/csv'
         )
         st.markdown('</div>', unsafe_allow_html=True)
 
-        # Add ability to sort and filter the dataframe
-        st.dataframe(shot_logs_df)
+        st.dataframe(shot_logs_df) 
+
+        # Player-specific search results
+        if player_search:
+            if 'PLAYER_NAME' in shot_logs_df.columns:
+                filtered_data = shot_logs_df[shot_logs_df['PLAYER_NAME'].str.contains(player_search, case=False, na=False)]
+                
+                if not filtered_data.empty:
+                    st.subheader(f"{player_search}'s Dataset")
+                    st.download_button(
+                        label=f"Download {player_search}'s Transformed Data",
+                        data=filtered_data.to_csv(index=False),
+                        file_name=f'{player_search}_cleaned_shot_logs.csv',
+                        mime='text/csv'
+                    )
+                    st.dataframe(filtered_data)
+                else:
+                    st.error(f"Please try again, no records found for player named '{player_search}'", icon="🔍")
+            else:
+                st.error("Column 'PLAYER_NAME' does not exist in the dataset.")
 
         # Display metrics about the cleaning process below the table with bullet points
         st.subheader("Data Cleaning Metrics")
@@ -132,7 +159,7 @@ with tab3:
         </ul>
         """, unsafe_allow_html=True)
     else:
-        st.warning("Please ingest the data first.")
+        st.warning("Please load data in the Data Ingestion tab first.")
 
 with tab4:
     st.header("Model Development and Training")
@@ -203,9 +230,20 @@ with tab4:
 
 with tab5:
     st.header("Model Performance Analysis")
-    output_path = os.path.join("/Users/iyeng1/Documents/Software-Development/PyDev II/DRIBBLE/OutputLogs/", "final_model_output.csv")
-    if os.path.exists(output_path):
-        results_df = pd.read_csv(output_path)
-        st.write(results_df.head())
-    else:
-        st.warning("No results found. Please train the model first.")
+    
+    # Check if the dataset is available in the session state immediately after ingestion
+    if 'shot_logs_df' in st.session_state:
+        # Automatically run the model without the need for a button click
+        results_df = train_and_evaluate_model(st.session_state['shot_logs_df'])
+        st.success("Model Evaluated Successfully!")
+        
+        st.subheader("Full Model Output")
+        # Allow downloading the final model output
+        st.download_button(
+            label="Download Final Model Output",
+            data=results_df.to_csv(index=False),
+            file_name='final_model_output.csv',
+            mime='text/csv'
+        )
+        st.dataframe(results_df)  
+        st.warning("Please load data in the Data Ingestion tab first.")
