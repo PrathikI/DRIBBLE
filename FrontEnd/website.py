@@ -113,10 +113,14 @@ with tab3:
         shot_logs_df, metrics = preprocess_data(st.session_state['shot_logs_df'], return_metrics=True)
         st.success("Data Transformed Successfully!")
 
-        # Player-specific search right above the dataset header
-        player_search = st.text_input("Search for a player:")
+        # Player-specific search
+        player_search = st.text_input("Search for a player:", key="player_search")
 
-        # Display cleaned dataset header with download button aligned to the right
+        # Position-specific dropdown, dynamically pulling positions from the dataset
+        unique_positions = sorted(shot_logs_df['POSITION'].dropna().unique())
+        position_search = st.selectbox("Filter by position:", ['All'] + unique_positions, key="position_search")
+
+        # Display cleaned dataset header with download button
         st.markdown('<div class="cleaned-dataset-header">', unsafe_allow_html=True)
         st.subheader("Cleaned Dataset")
         st.download_button(
@@ -126,27 +130,39 @@ with tab3:
             mime='text/csv'
         )
         st.markdown('</div>', unsafe_allow_html=True)
-
-        st.dataframe(shot_logs_df) 
+        
+        # Always display the cleaned dataset
+        st.dataframe(shot_logs_df)
 
         # Player-specific search results
         if player_search:
-            if 'PLAYER_NAME' in shot_logs_df.columns:
-                filtered_data = shot_logs_df[shot_logs_df['PLAYER_NAME'].str.contains(player_search, case=False, na=False)]
-                
-                if not filtered_data.empty:
-                    st.subheader(f"{player_search}'s Dataset")
-                    st.download_button(
-                        label=f"Download {player_search}'s Transformed Data",
-                        data=filtered_data.to_csv(index=False),
-                        file_name=f'{player_search}_cleaned_shot_logs.csv',
-                        mime='text/csv'
-                    )
-                    st.dataframe(filtered_data)
-                else:
-                    st.error(f"Please try again, no records found for player named '{player_search}'", icon="🔍")
+            filtered_player_data = shot_logs_df[shot_logs_df['PLAYER_NAME'].str.contains(player_search, case=False, na=False)]
+            if not filtered_player_data.empty:
+                st.subheader(f"{player_search}'s Dataset")
+                st.download_button(
+                    label=f"Download {player_search}'s Transformed Data",
+                    data=filtered_player_data.to_csv(index=False),
+                    file_name=f'{player_search}_cleaned_shot_logs.csv',
+                    mime='text/csv'
+                )
+                st.dataframe(filtered_player_data)
             else:
-                st.error("Column 'PLAYER_NAME' does not exist in the dataset.")
+                st.error(f"No records found for player named '{player_search}'")
+
+        # Position-specific search results
+        if position_search != 'All':
+            filtered_position_data = shot_logs_df[shot_logs_df['POSITION'] == position_search]
+            if not filtered_position_data.empty:
+                st.subheader(f"Position: {position_search}'s Dataset")
+                st.download_button(
+                    label=f"Download Position: {position_search}'s Transformed Data",
+                    data=filtered_position_data.to_csv(index=False),
+                    file_name=f'{position_search}_cleaned_shot_logs.csv',
+                    mime='text/csv'
+                )
+                st.dataframe(filtered_position_data)
+            else:
+                st.error(f"No records found for the position '{position_search}'")
 
         # Display metrics about the cleaning process below the table with bullet points
         st.subheader("Data Cleaning Metrics")
@@ -160,6 +176,8 @@ with tab3:
         """, unsafe_allow_html=True)
     else:
         st.warning("Please load data in the Data Ingestion tab first.")
+
+
 
 with tab4:
     st.header("Model Development and Training")
@@ -236,8 +254,15 @@ with tab5:
         # Automatically run the model without the need for a button click
         results_df = train_and_evaluate_model(st.session_state['shot_logs_df'])
         st.success("Model Evaluated Successfully!")
-        
-        st.subheader("Full Model Output")
+
+        # Player-specific search right above the dataset header
+        player_search = st.text_input("Search for a player in model output:", key="player_search_tab5")
+
+        # Zone-specific dropdown, pulling zones dynamically from the dataset
+        unique_zones = sorted(results_df['Zone Name'].dropna().unique())
+        zone_search = st.selectbox("Filter by Zone Name:", ['All'] + unique_zones, key="zone_search_tab5")
+
+        st.subheader("Final Model Output")
         # Allow downloading the final model output
         st.download_button(
             label="Download Final Model Output",
@@ -245,5 +270,40 @@ with tab5:
             file_name='final_model_output.csv',
             mime='text/csv'
         )
-        st.dataframe(results_df)  
+        st.dataframe(results_df)
+
+        # Player-specific search results
+        if player_search:
+            filtered_player_data = results_df[results_df['Player Name'].str.contains(player_search, case=False, na=False)]
+            if not filtered_player_data.empty:
+                st.subheader(f"{player_search}'s Model Output")
+                st.download_button(
+                    label=f"Download {player_search}'s Model Output",
+                    data=filtered_player_data.to_csv(index=False),
+                    file_name=f'{player_search}_model_output.csv',
+                    mime='text/csv'
+                )
+                st.dataframe(filtered_player_data)
+            else:
+                st.error(f"No records found for player named '{player_search}'")
+
+        # Zone-specific search results
+        if zone_search != 'All':
+            filtered_zone_data = results_df[results_df['Zone Name'] == zone_search]
+            if not filtered_zone_data.empty:
+                st.subheader(f"{zone_search} Zone's Model Output")
+                st.download_button(
+                    label=f"Download {zone_search} Zone's Model Output",
+                    data=filtered_zone_data.to_csv(index=False),
+                    file_name=f'{zone_search}_zone_model_output.csv',
+                    mime='text/csv'
+                )
+                st.dataframe(filtered_zone_data)
+            else:
+                st.error(f"No records found for the zone '{zone_search}'")
+    else:
         st.warning("Please load data in the Data Ingestion tab first.")
+
+
+
+
