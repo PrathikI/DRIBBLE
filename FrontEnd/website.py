@@ -11,8 +11,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from Model.data_loader import load_data
 from Model.data_cleaning import preprocess_data
-from Model.model import train_and_evaluate_model
-from Model.output import structure_output, save_final_output
+from Model.model import *
 from FrontEnd.descriptions import *  
 
 # Customizing the look and feel with CSS for font size and menu bar
@@ -250,10 +249,10 @@ with tab4:
 with tab5:
     st.header("Model Performance Analysis")
     
-    # Check if the dataset is available in the session state immediately after ingestion
+    # Check if the dataset is available in the session state
     if 'shot_logs_df' in st.session_state:
-        # Automatically run the model without the need for a button click
-        results_df, best_params, best_cv_score, test_accuracy = train_and_evaluate_model(st.session_state['shot_logs_df'])
+        # Use cached version of the model to avoid rerunning on every update
+        results_df, best_knn, X_test, Y_test, best_params, best_cv_score, test_accuracy = train_and_evaluate_model(st.session_state['shot_logs_df'])
         st.success("Model Evaluated Successfully!")
 
         # Player-specific search right above the dataset header
@@ -273,6 +272,36 @@ with tab5:
         )
         st.dataframe(results_df)
 
+        # Player-specific search results
+        if player_search:
+            filtered_player_data = results_df[results_df['Player Name'].str.contains(player_search, case=False, na=False)]
+            if not filtered_player_data.empty:
+                st.subheader(f"{player_search}'s Model Output")
+                st.download_button(
+                    label=f"Download {player_search}'s Model Output",
+                    data=filtered_player_data.to_csv(index=False),
+                    file_name=f'{player_search}_model_output.csv',
+                    mime='text/csv'
+                )
+                st.dataframe(filtered_player_data)
+            else:
+                st.error(f"No records found for player named '{player_search}'")
+
+        # Zone-specific search results
+        if zone_search != 'All':
+            filtered_zone_data = results_df[results_df['Zone Name'] == zone_search]
+            if not filtered_zone_data.empty:
+                st.subheader(f"{zone_search} Zone's Model Output")
+                st.download_button(
+                    label=f"Download {zone_search} Zone's Model Output",
+                    data=filtered_zone_data.to_csv(index=False),
+                    file_name=f'{zone_search}_zone_model_output.csv',
+                    mime='text/csv'
+                )
+                st.dataframe(filtered_zone_data)
+            else:
+                st.error(f"No records found for the zone '{zone_search}'")
+
         # Display model performance metrics
         st.markdown("""
         ### Model Performance Metrics:
@@ -280,15 +309,17 @@ with tab5:
         
         # Applying blue color to the metrics
         st.markdown(f"""
-    <ul class="data-metrics">
-        <li><strong>Best Parameters:</strong> <span class="data-metrics-value" style="font-weight:bold; color:#007ACC;">{best_params}</span></li>
-        <li><strong>Best Cross-Validated Score:</strong> <span class="data-metrics-value" style="font-weight:bold; color:#007ACC;">{best_cv_score:.2f}%</span></li>
-        <li><strong>Test Set Accuracy:</strong> <span class="data-metrics-value" style="font-weight:bold; color:#007ACC;">{test_accuracy:.2f}%</span></li>
-    </ul>
-    """, unsafe_allow_html=True)
+        <ul class="data-metrics">
+            <li><strong>Best Parameters:</strong> <span class="data-metrics-value" style="font-weight:bold; color:#007ACC;">{best_params}</span></li>
+            <li><strong>Best Cross-Validated Score:</strong> <span class="data-metrics-value" style="font-weight:bold; color:#007ACC;">{best_cv_score:.2f}%</span></li>
+            <li><strong>Test Set Accuracy:</strong> <span class="data-metrics-value" style="font-weight:bold; color:#007ACC;">{test_accuracy * 100:.2f}%</span></li>
+        </ul>
+        """, unsafe_allow_html=True)
 
     else:
         st.warning("Please load data in the Data Ingestion tab first.")
+
+
 
 
 

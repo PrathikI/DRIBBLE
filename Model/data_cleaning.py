@@ -18,17 +18,14 @@ def preprocess_data(shot_logs_df, return_metrics=False):
         shot_logs_df['EVENT_TYPE'] = shot_logs_df['EVENT_TYPE'].str.upper()
         shot_logs_df['SHOT_TYPE'] = shot_logs_df['SHOT_TYPE'].str.title()
 
-        # Optional: Return metrics
-        if return_metrics:
-            metrics = {
-                'initial_count': initial_count,
-                'final_count': final_count,
-                'rows_dropped': initial_count - final_count,
-                'null_values': shot_logs_df.isnull().sum().sum()
-            }
-            return shot_logs_df, metrics
-
-        return shot_logs_df
+        metrics = {
+            'initial_count': initial_count,
+            'final_count': final_count,
+            'rows_dropped': initial_count - final_count,
+            'null_values': shot_logs_df.isnull().sum().sum()
+        }
+        
+        return shot_logs_df, metrics
 
     except Exception as e:
         print(f"An error occurred during preprocessing: {e}")
