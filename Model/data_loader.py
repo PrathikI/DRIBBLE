@@ -1,27 +1,27 @@
 import pandas as pd
-import os
 
-def load_data(base_path):
-    shot_logs = []
-    # Load only the 2004 dataset for now
-    file_name = 'NBA_2006_Shots.csv'
-    file_path = os.path.join(base_path, file_name)
-    if os.path.exists(file_path):
-        df = pd.read_csv(file_path)
-        shot_logs.append(df)
+def load_data(uploaded_file):
+    """
+    Loads the data from an uploaded file. Supports CSV and Excel formats.
     
-    # Combine all yearly data into a single DataFrame
-    if shot_logs:  
-        shot_logs_df = pd.concat(shot_logs, ignore_index=True)
+    Args:
+    uploaded_file (UploadedFile): The uploaded file object from Streamlit.
+
+    Returns:
+    pd.DataFrame: The loaded shot logs DataFrame.
+    """
+    if uploaded_file is not None:
+        # Get the file extension
+        file_extension = uploaded_file.name.split('.')[-1].lower()
+
+        # Check the file extension and load the appropriate format
+        if file_extension == 'csv':
+            shot_logs_df = pd.read_csv(uploaded_file)
+        elif file_extension in ['xls', 'xlsx']:
+            shot_logs_df = pd.read_excel(uploaded_file)
+        else:
+            raise ValueError(f"Unsupported file format: {file_extension}")
+        
+        return shot_logs_df
     else:
-        shot_logs_df = pd.DataFrame()  
-    
-    return shot_logs_df
-
-# 2004 - 2024 Shot Logs
-# for year in range(2005, 2025):  # From 2005 to 2024 inclusive
-#     file_name = f'NBA_{year}_Shots.csv'
-#     file_path = os.path.join(base_path, file_name)
-#     if os.path.exists(file_path):
-#         df = pd.read_csv(file_path)
-#         shot_logs.append(df)
+        raise ValueError("No file uploaded.")
