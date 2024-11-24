@@ -34,3 +34,7 @@ To execute the full workflow, run the following commands:
 2. Run the frontend process:
    ```bash
    streamlit run website.py
+
+### 6) `Model Accuracies`
+- **Best cross-validated score**: 67.61%
+- **Test set accuracy**: 67.78%
