@@ -30,3 +30,7 @@ To execute the full workflow, run the following commands:
 1. Run the backend process:
    ```bash
    python main.py
+
+2. Run the frontend process:
+   ```bash
+   streamlit run website.py
